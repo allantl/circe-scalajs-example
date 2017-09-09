@@ -1,0 +1,1 @@
+Minimal example of using circe with scala js
