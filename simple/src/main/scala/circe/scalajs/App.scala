@@ -1,6 +1,7 @@
 package circe.scalajs
 
 import io.circe.parser._
+import io.circe.syntax._
 
 object App {
   def main(args: Array[String]): Unit = {
@@ -11,5 +12,7 @@ object App {
         |}""".stripMargin
     val decoded = decode[Person](json)
     println(decoded)
+    val encoded = Person("Michael", 30).asJson
+    println(encoded)
   }
 }
